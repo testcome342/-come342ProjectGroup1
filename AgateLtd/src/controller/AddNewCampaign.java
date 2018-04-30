@@ -1,13 +1,12 @@
 package controller;
 
-import java.util.Scanner;
-
 import domain.Campaign;
 import domain.Client;
 import helper.Database;
 import helper.PrintHelper;
+
 /*
- Onur Tengirþek
+ Onur Tengirsek
  30.04.18
  */
 

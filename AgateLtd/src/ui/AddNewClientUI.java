@@ -1,11 +1,10 @@
 package ui;
 
-import java.util.Scanner;
-
 import domain.Client;
 import domain.Campaign;
 import helper.Database;
 import helper.PrintHelper;
+import helper.ScanHelper;
 import controller.AddNewClient;
 
 public class AddNewClientUI {
@@ -33,22 +32,22 @@ public class AddNewClientUI {
 		int companyNo;
 		
 		PrintHelper.print("Company No= ", true);
-		companyNo = new Scanner(System.in).nextInt();
+		companyNo = ScanHelper.scanInt();
 		
 		PrintHelper.print("Company Name= ", true);
-		companyName = new Scanner(System.in).nextLine();
+		companyName = ScanHelper.scanString();
 		
 		PrintHelper.print("Company Address= ", true);
-		companyAddress = new Scanner(System.in).nextLine();
+		companyAddress = ScanHelper.scanString();
 
 		PrintHelper.print("Company Email= ", true);
-		companyEmail = new Scanner(System.in).nextLine();
+		companyEmail = ScanHelper.scanString();
 
 		PrintHelper.print("Contact Name= ", true);
-		contactName = new Scanner(System.in).nextLine();
+		contactName = ScanHelper.scanString();
 
 		PrintHelper.print("Contact Email= ", true);
-		contactEmail = new Scanner(System.in).nextLine();
+		contactEmail = ScanHelper.scanString();
 
 		Client newClient = new Client(companyNo, companyName, companyAddress, companyEmail, contactName, contactEmail);
 
@@ -62,7 +61,7 @@ public class AddNewClientUI {
 			while(true) {
 				
 				PrintHelper.print("Answer=> ", true);
-				String response = new Scanner(System.in).nextLine();
+				String response = ScanHelper.scanString();
 				
 				if("YES".equals(response.toUpperCase())) {
 					

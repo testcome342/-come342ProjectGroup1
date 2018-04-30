@@ -2,8 +2,6 @@ package controller;
 
 import domain.Campaign;
 import domain.Client;
-import helper.Database;
-import helper.PrintHelper;
 
 public class AddNewClient {
 	

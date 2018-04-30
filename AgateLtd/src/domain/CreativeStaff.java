@@ -1,7 +1,5 @@
 package domain;
 
-import helper.Database;
-
 public class CreativeStaff extends StaffMember{
 	
 	/*

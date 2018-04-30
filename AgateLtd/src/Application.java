@@ -1,18 +1,11 @@
-import java.io.IOException;
-import java.util.Scanner;
 
-import domain.Client;
 import helper.Database;
 import helper.PrintHelper;
+import helper.ScanHelper;
 import ui.AddNewCampaignUI;
 import ui.AddNewClientUI;
 
 public class Application {
-	
-	/*
-	 * Arda Altunyay
-	 * 12.04.2018
-	 * */
 
 	public static void main(String[] args) {
 		Database.init();
@@ -36,7 +29,7 @@ public class Application {
 			PrintHelper.printLine(49);
 			
 			PrintHelper.print("Enter a number=> ", true);
-			choice = new Scanner(System.in).nextInt();
+			choice = ScanHelper.scanInt();
 			PrintHelper.printLine(49);
 			switch(choice) {
 				

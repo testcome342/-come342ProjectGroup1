@@ -1,16 +1,15 @@
 package ui;
 
-import java.util.Scanner;
-
 import controller.AddNewCampaign;
 import domain.Campaign;
 import domain.Client;
 import helper.Database;
 import helper.PrintHelper;
 /*
- Onur Tengirþek
+ Onur Tengirï¿½ek
  30.04.18
  */
+import helper.ScanHelper;
 
 public class AddNewCampaignUI {
 
@@ -28,7 +27,7 @@ private static AddNewCampaignUI instance;
 	}
 	public void startInterface() {
 		PrintHelper.print("Please Select a Client =>",true);
-		int id = new Scanner(System.in).nextInt();
+		int id = ScanHelper.scanInt();
 		selectClient(id);
 		Campaign campaign = createNewCampaign();
 		

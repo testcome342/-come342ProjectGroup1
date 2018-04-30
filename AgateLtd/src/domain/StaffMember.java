@@ -1,7 +1,5 @@
 package domain;
 
-import helper.Database;
-
 public abstract class StaffMember {
 	
 	/*
