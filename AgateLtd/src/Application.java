@@ -4,6 +4,7 @@ import java.util.Scanner;
 import domain.Client;
 import helper.Database;
 import helper.PrintHelper;
+import ui.AddNewCampaignUI;
 import ui.AddNewClientUI;
 
 public class Application {
@@ -43,7 +44,7 @@ public class Application {
 					AddNewClientUI.getInstance();
 					break;
 				case 2:
-					PrintHelper.print("add a new campaign");
+					AddNewCampaignUI.getInstance();
 					break;
 				case 5:
 					PrintHelper.print("assign staff to work on a campaign");

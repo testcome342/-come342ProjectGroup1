@@ -39,34 +39,47 @@ public static Campaign createCampaign() {
 	
 }
 
-public Campaign(String Title, String StartDate, String FinishDate, double EstimatedCost) {
-	this.setTitle(title);
-	this.setEstimatedCost(estimatedCost);
-	this.setFinishDate(finishDate);
-	this.setStartDate(startDate);
+
+
+public Campaign(String title, String startDate, String finishDate, double estimatedCost) {
+		super();
+		this.title = title;
+		this.estimatedCost = estimatedCost;
+		this.finishDate = finishDate;
+		this.startDate = startDate;
 	}
-public void setTitle(String title){
-   this.title=title;
-}
 public String getTitle() {
-   return title;
+	return title;
 }
-public void setEstimatedCost(double estimatedCost) {
-   this.estimatedCost=estimatedCost;
+
+public void setTitle(String title) {
+	this.title = title;
 }
+
 public double getEstimatedCost() {
-   return estimatedCost;
+	return estimatedCost;
 }
-public void setFinishDate(String finishDate) {
-   this.finishDate=finishDate;
+
+public void setEstimatedCost(double estimatedCost) {
+	this.estimatedCost = estimatedCost;
 }
+
 public String getFinishDate() {
-   return finishDate;
+	return finishDate;
 }
-public void setStartDate(String startDate) {
-   this.startDate=startDate;
+
+public void setFinishDate(String finishDate) {
+	this.finishDate = finishDate;
 }
+
 public String getStartDate() {
-   return startDate;
+	return startDate;
 }
+
+public void setStartDate(String startDate) {
+	this.startDate = startDate;
+}
+
+
+
 }
