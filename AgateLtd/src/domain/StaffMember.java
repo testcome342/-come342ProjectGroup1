@@ -14,9 +14,8 @@ public abstract class StaffMember {
 	private String staffStartDate;
 	private String staffEmailAddress;
 	
-	public StaffMember(String staffName, String staffStartDate, String staffEmailAddress) {
-		int lastClientId = Database.lastClientId();
-		this.staffNo = ++lastClientId;
+	public StaffMember(int staffNo, String staffName, String staffStartDate, String staffEmailAddress) {
+		this.staffNo = staffNo;
 		this.staffName = staffName;
 		this.staffStartDate = staffStartDate;
 		this.staffEmailAddress = staffEmailAddress;

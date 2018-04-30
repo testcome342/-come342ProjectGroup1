@@ -24,10 +24,9 @@ public class Client {
 		super();
 	}
 	
-	public Client(String companyName, String companyEmail, String companyAddress, String contactName, String contactEmail) {
+	public Client(int id, String companyName, String companyEmail, String companyAddress, String contactName, String contactEmail) {
 		super();
-		int lastClientId = Database.lastClientId();
-		this.id = ++lastClientId;
+		this.id = id;
 		this.companyName=companyName;
 		this.companyEmail=companyEmail;
 		this.companyAddress=companyAddress;

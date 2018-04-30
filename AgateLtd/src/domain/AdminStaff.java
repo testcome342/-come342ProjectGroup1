@@ -7,8 +7,8 @@ public class AdminStaff extends StaffMember {
 	 * 30.04.2018
 	 * */
 	
-	public AdminStaff(String staffName, String staffStartDate, String staffEmailAddress) {
-		super(staffName, staffStartDate, staffEmailAddress);
+	public AdminStaff(int staffNo, String staffName, String staffStartDate, String staffEmailAddress) {
+		super(staffNo, staffName, staffStartDate, staffEmailAddress);
 		
 	}
 	

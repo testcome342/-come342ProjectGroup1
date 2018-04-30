@@ -30,6 +30,10 @@ public class AddNewClientUI {
 	
 	public void startInterface() {
 		String companyName, companyAddress, companyEmail, contactName, contactEmail;
+		int companyNo;
+		
+		PrintHelper.print("Company No= ", true);
+		companyNo = new Scanner(System.in).nextInt();
 		
 		PrintHelper.print("Company Name= ", true);
 		companyName = new Scanner(System.in).nextLine();
@@ -46,7 +50,7 @@ public class AddNewClientUI {
 		PrintHelper.print("Contact Email= ", true);
 		contactEmail = new Scanner(System.in).nextLine();
 
-		Client newClient = new Client(companyName, companyAddress, companyEmail, contactName, contactEmail);
+		Client newClient = new Client(companyNo, companyName, companyAddress, companyEmail, contactName, contactEmail);
 
 		int id = createNewClient(newClient);
 		

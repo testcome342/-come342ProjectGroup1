@@ -1,5 +1,7 @@
 package domain;
 
+import helper.Database;
+
 public class CreativeStaff extends StaffMember{
 	
 	/*
@@ -7,8 +9,8 @@ public class CreativeStaff extends StaffMember{
 	 * 30.04.2018
 	 * */
 
-	public CreativeStaff(String staffName, String staffStartDate, String staffEmailAddress) {
-		super(staffName, staffStartDate, staffEmailAddress);
+	public CreativeStaff(int staffNo, String staffName, String staffStartDate, String staffEmailAddress) {
+		super(staffNo, staffName, staffStartDate, staffEmailAddress);
 		
 		
 	}
