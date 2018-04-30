@@ -4,11 +4,13 @@ import java.util.List;
 
 import domain.Campaign;
 import domain.Client;
+import domain.CreativeStaff;
 
 
 public class Database {
 	
 	public static List<Client> clientList = new ArrayList<Client>();
+	public static List<CreativeStaff> creativeStaffList = new ArrayList<CreativeStaff>();
 	
 	public static void init() {
 		Client eti = new Client("ETI", "Mecidiyekoy/SISLI", "eti@eti.com.tr", "Ahmet Bey", "ahmet@eti.com.tr");
@@ -16,5 +18,13 @@ public class Database {
 		eti.addNewCampaign(eti_50inci_yil);
 		
 		clientList.add(eti);
+	}
+	
+	public static int lastClientId() {
+		return Database.clientList.get(Database.clientList.size()).getId();
+	}
+	
+	public static int lastCreativeStaffId() {
+		return Database.creativeStaffList.get(Database.creativeStaffList.size()).getStaffNo();
 	}
 }

@@ -19,7 +19,7 @@ public class AddNewClient {
 		return instance;
 	}
 	
-	public AddNewClient() {
+	private AddNewClient() {
 		
 	}
 	

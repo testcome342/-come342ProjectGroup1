@@ -26,8 +26,8 @@ public class Client {
 	
 	public Client(String companyName, String companyEmail, String companyAddress, String contactName, String contactEmail) {
 		super();
-		int listCount = Database.clientList.size();
-		this.id = ++listCount;
+		int lastClientId = Database.lastClientId();
+		this.id = ++lastClientId;
 		this.companyName=companyName;
 		this.companyEmail=companyEmail;
 		this.companyAddress=companyAddress;
