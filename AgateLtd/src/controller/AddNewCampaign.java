@@ -2,7 +2,6 @@ package controller;
 
 import domain.Campaign;
 import domain.Client;
-import helper.Database;
 import helper.PrintHelper;
 
 /*
@@ -28,16 +27,17 @@ public class AddNewCampaign {
 	public void showClientCampaigns(int id) {
 		Client client;
 	
-		for(int i=0; i<Database.clientList.size();i++) {
-			if(id == Database.clientList.get(i).getId()) {
-				client = Database.clientList.get(i);
+		for(int i=0; i<Client.getClients().size();i++) {
+			if(id == Client.getClients().get(i).getId()) {
+				client = Client.getClients().get(i);
 				
 				if(client.getCampaigns().size() == 0) {
 					PrintHelper.print("This client don't have campaign(s)");
 				} else {
 										
 					 for(int j = 0;j<client.getCampaigns().size();j++) {
-						 PrintHelper.print(String.valueOf(j) + " " +client.getCampaigns().get(j).getTitle());
+						 int num = j + 1;
+						 PrintHelper.print(String.valueOf(num) + " " +client.getCampaigns().get(j).getTitle());
 					 }
 					 
 				}

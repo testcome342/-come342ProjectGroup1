@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import helper.Database;
-import helper.PrintHelper;
-
 
 public class Client {
 	
@@ -72,19 +70,9 @@ public class Client {
 		this.companyAddress = companyAddress;
 	}
 	
-	public static void getClients()
+	public static List<Client> getClients()
 	{
-        List<Client> clientList = Database.clientList;
-		if(clientList.size() != 0) {
-			for(int i=0; i< clientList.size(); i++) {
-				PrintHelper.print(String.valueOf(clientList.get(i).getId()) +" - "+ clientList.get(i).getCompanyName() + 
-						" (Campaigns: " + clientList.get(i).getCampaigns().size() + ")");
-			}
-			
-		} else {
-			PrintHelper.print("Not Found Any Company at List..!");
-		}
-		
+        return Database.clientList;	
 	}
 	
 	public static int createClient(Client client) {

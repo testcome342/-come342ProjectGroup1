@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import helper.PrintHelper;
 import helper.ScanHelper;
 
@@ -11,6 +14,7 @@ public class Campaign {
 	private double estimatedCost;
 	private String finishDate;
 	private String startDate;
+	private List<CreativeStaff> creativeStaffList;
 
 	public  Campaign() {}
 		//Default Constructor
@@ -44,6 +48,7 @@ public class Campaign {
 			this.estimatedCost = estimatedCost;
 			this.finishDate = finishDate;
 			this.startDate = startDate;
+			this.setCreativeStaffList(new ArrayList<CreativeStaff>());
 		}
 	
 	public String getTitle() {
@@ -76,6 +81,18 @@ public class Campaign {
 	
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
+	}
+
+	public List<CreativeStaff> getCreativeStaffList() {
+		return creativeStaffList;
+	}
+
+	public void setCreativeStaffList(List<CreativeStaff> creativeStaffList) {
+		this.creativeStaffList = creativeStaffList;
+	}
+	
+	public void assignStaff(CreativeStaff creativeStaff) {
+		this.creativeStaffList.add(creativeStaff);
 	}
 
 }

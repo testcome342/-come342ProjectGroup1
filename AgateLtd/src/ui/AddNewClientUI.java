@@ -5,6 +5,9 @@ import domain.Campaign;
 import helper.Database;
 import helper.PrintHelper;
 import helper.ScanHelper;
+
+import java.util.List;
+
 import controller.AddNewClient;
 
 public class AddNewClientUI {
@@ -23,7 +26,16 @@ public class AddNewClientUI {
 	
 	private AddNewClientUI() {
 		PrintHelper.print("*** Client list ***");
-		Client.getClients();
+		List<Client> clientList = Client.getClients();
+		if(clientList.size() != 0) {
+			for(int i=0; i< clientList.size(); i++) {
+				PrintHelper.print(String.valueOf(clientList.get(i).getId()) +" - "+ clientList.get(i).getCompanyName() + 
+						" (Campaigns: " + clientList.get(i).getCampaigns().size() + ")");
+			}
+			
+		} else {
+			PrintHelper.print("Not Found Any Company at List..!");
+		}
 		startInterface();
 	}
 	

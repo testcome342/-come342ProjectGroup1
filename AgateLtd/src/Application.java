@@ -4,6 +4,7 @@ import helper.PrintHelper;
 import helper.ScanHelper;
 import ui.AddNewCampaignUI;
 import ui.AddNewClientUI;
+import ui.AssignStaffOnCampaignUI;
 
 public class Application {
 
@@ -40,7 +41,7 @@ public class Application {
 					AddNewCampaignUI.getInstance();
 					break;
 				case 5:
-					PrintHelper.print("assign staff to work on a campaign");
+					AssignStaffOnCampaignUI.getInstance();
 					break;
 				case 11:
 					PrintHelper.print("add a new advert to a campaign");

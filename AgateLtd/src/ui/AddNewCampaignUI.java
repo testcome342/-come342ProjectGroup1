@@ -1,5 +1,7 @@
 package ui;
 
+import java.util.List;
+
 import controller.AddNewCampaign;
 import domain.Campaign;
 import domain.Client;
@@ -21,7 +23,16 @@ private static AddNewCampaignUI instance;
 	}
 	private AddNewCampaignUI() {
 		PrintHelper.print("*** Client list ***");
-		Client.getClients();
+		List<Client> clientList = Client.getClients();
+		if(clientList.size() != 0) {
+			for(int i=0; i< clientList.size(); i++) {
+				PrintHelper.print(String.valueOf(clientList.get(i).getId()) +" - "+ clientList.get(i).getCompanyName() + 
+						" (Campaigns: " + clientList.get(i).getCampaigns().size() + ")");
+			}
+			
+		} else {
+			PrintHelper.print("Not Found Any Company at List..!");
+		}
 		startInterface();
 		
 	}
