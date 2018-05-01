@@ -61,7 +61,7 @@ public class AssignStaffOnCampaign {
 				staffMemberList.removeAll(campaign.getCreativeStaffList());
 				
 				if(staffMemberList.size() == 0) {
-					PrintHelper.print("This client don't have campaign(s)");
+					PrintHelper.print("This campaign has enough staff(s)");
 					return false;
 				} else {
 					
@@ -77,7 +77,7 @@ public class AssignStaffOnCampaign {
 		return false;
 	}
 
-	public void selectCreativeStaff(int staffNo, int campaignNo, int clientId) {
+	public void selectStaffMember(int staffNo, int campaignNo, int clientId) {
 		Client client;
 		Campaign campaign;
 		

@@ -2,6 +2,7 @@
 import helper.Database;
 import helper.PrintHelper;
 import helper.ScanHelper;
+import ui.AddNewAdvertToCampaignUI;
 import ui.AddNewCampaignUI;
 import ui.AddNewClientUI;
 import ui.AddNewMemberStaffUI;
@@ -32,7 +33,7 @@ public class Application {
 			
 			PrintHelper.print("Enter a number=> ", true);
 			choice = ScanHelper.scanInt();
-			PrintHelper.printLine(49);
+			PrintHelper.printLine(10);
 			switch(choice) {
 				
 				case 1:
@@ -45,7 +46,7 @@ public class Application {
 					AssignStaffOnCampaignUI.getInstance();
 					break;
 				case 11:
-					PrintHelper.print("add a new advert to a campaign");
+					AddNewAdvertToCampaignUI.getInstance();
 					break;
 				case 12:
 					AddNewMemberStaffUI.getInstance();
@@ -58,7 +59,7 @@ public class Application {
 					PrintHelper.print("error, try enter a number");
 					break;
 			}
-			PrintHelper.printRow(40);
+			PrintHelper.printRow(10);
 		}
 		
 	}

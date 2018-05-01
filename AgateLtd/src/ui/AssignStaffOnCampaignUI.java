@@ -67,6 +67,6 @@ public class AssignStaffOnCampaignUI {
 	}
 	
 	public void selectCreativeStaff(int staffNo, int campaignNo, int cliendId) {
-		AssignStaffOnCampaign.getInstance().selectCreativeStaff(staffNo, campaignNo, cliendId);
+		AssignStaffOnCampaign.getInstance().selectStaffMember(staffNo, campaignNo, cliendId);
 	}
 }

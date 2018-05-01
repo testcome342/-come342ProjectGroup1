@@ -41,6 +41,7 @@ public class AddNewCampaignUI {
 		startInterface();
 		
 	}
+	
 	public void startInterface() {
 		PrintHelper.print("Please Select a Client =>",true);
 		int id = ScanHelper.scanInt();

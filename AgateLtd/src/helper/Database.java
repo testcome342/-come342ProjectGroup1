@@ -6,6 +6,7 @@ import domain.AdminStaff;
 import domain.Campaign;
 import domain.Client;
 import domain.CreativeStaff;
+import domain.PosterAdvert;
 import domain.StaffMember;
 
 public class Database {
@@ -32,6 +33,9 @@ public class Database {
 		
 		Client eti = new Client(1,"ETI", "Mecidiyekoy/SISLI", "eti@eti.com.tr", "Ahmet Bey", "ahmet@eti.com.tr");
 		Campaign eti_50inci_yil = new Campaign("ETI 50. YIL", "14.04.2018", "24.05.2018", 550000.0);
+		PosterAdvert posterAdvert = new PosterAdvert("POSTER ETI", "20.08.2018", 5000.0, 100000.0);
+		
+		eti_50inci_yil.addAdvert(posterAdvert);
 		eti_50inci_yil.assignStaff(ugur);
 		eti.addNewCampaign(eti_50inci_yil);
 		

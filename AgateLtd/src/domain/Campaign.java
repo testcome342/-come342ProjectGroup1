@@ -50,6 +50,7 @@ public class Campaign {
 			this.finishDate = finishDate;
 			this.startDate = startDate;
 			this.staffMemberList = new ArrayList<StaffMember>();
+			this.advertList = new ArrayList<Advert>();
 		}
 	
 	public String getTitle() {
@@ -102,6 +103,10 @@ public class Campaign {
 
 	public void setAdvertList(List<Advert> advertList) {
 		this.advertList = advertList;
+	}
+	
+	public void addAdvert(Advert advert) {
+		this.advertList.add(advert);
 	}
 
 }
