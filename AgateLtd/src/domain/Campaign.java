@@ -14,7 +14,7 @@ public class Campaign {
 	private double estimatedCost;
 	private String finishDate;
 	private String startDate;
-	private List<CreativeStaff> creativeStaffList;
+	private List<StaffMember> staffMemberList;
 
 	public  Campaign() {}
 		//Default Constructor
@@ -48,7 +48,7 @@ public class Campaign {
 			this.estimatedCost = estimatedCost;
 			this.finishDate = finishDate;
 			this.startDate = startDate;
-			this.setCreativeStaffList(new ArrayList<CreativeStaff>());
+			this.staffMemberList = new ArrayList<StaffMember>();
 		}
 	
 	public String getTitle() {
@@ -83,16 +83,16 @@ public class Campaign {
 		this.startDate = startDate;
 	}
 
-	public List<CreativeStaff> getCreativeStaffList() {
-		return creativeStaffList;
+	public List<StaffMember> getCreativeStaffList() {
+		return staffMemberList;
 	}
 
-	public void setCreativeStaffList(List<CreativeStaff> creativeStaffList) {
-		this.creativeStaffList = creativeStaffList;
+	public void setCreativeStaffList(List<StaffMember> staffMemberList) {
+		this.staffMemberList = staffMemberList;
 	}
 	
-	public void assignStaff(CreativeStaff creativeStaff) {
-		this.creativeStaffList.add(creativeStaff);
+	public void assignStaff(StaffMember staffMember) {
+		this.staffMemberList.add(staffMember);
 	}
 
 }

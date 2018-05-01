@@ -1,5 +1,9 @@
 package domain;
 
+import java.util.List;
+
+import helper.Database;
+
 public abstract class StaffMember {
 	
 	/*
@@ -49,6 +53,14 @@ public abstract class StaffMember {
 
 	public void setStaffEmailAddress(String staffEmailAddress) {
 		this.staffEmailAddress = staffEmailAddress;
+	}
+	
+	public static List<StaffMember> getStaffMembers() {
+		return Database.staffMemberList;
+	}
+	
+	public static void addStaff(StaffMember staffMember) {
+		Database.staffMemberList.add(staffMember);
 	}
 	
 	

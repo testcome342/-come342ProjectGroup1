@@ -5,7 +5,7 @@ import java.util.List;
 
 import domain.Campaign;
 import domain.Client;
-import domain.CreativeStaff;
+import domain.StaffMember;
 import helper.PrintHelper;
 
 public class AssignStaffOnCampaign {
@@ -56,17 +56,17 @@ public class AssignStaffOnCampaign {
 				client = Client.getClients().get(i);
 				campaign = client.getCampaigns().get(campaignNo);
 								
-				List<CreativeStaff> creativeStaffList = new ArrayList<CreativeStaff>(CreativeStaff.getCreativeStaffs());
+				List<StaffMember> staffMemberList = new ArrayList<StaffMember>(StaffMember.getStaffMembers());
 				
-				creativeStaffList.removeAll(campaign.getCreativeStaffList());
+				staffMemberList.removeAll(campaign.getCreativeStaffList());
 				
-				if(creativeStaffList.size() == 0) {
+				if(staffMemberList.size() == 0) {
 					PrintHelper.print("This client don't have campaign(s)");
 					return false;
 				} else {
 					
-					for(int j=0; j < creativeStaffList.size();j++) {
-						PrintHelper.print(String.valueOf(creativeStaffList.get(j).getStaffNo())+ " - " +creativeStaffList.get(j).getStaffName());
+					for(int j=0; j < staffMemberList.size();j++) {
+						PrintHelper.print(String.valueOf(staffMemberList.get(j).getStaffNo())+ " - " +staffMemberList.get(j).getStaffName());
 					}
 					
 					return true;
@@ -86,9 +86,9 @@ public class AssignStaffOnCampaign {
 				client = Client.getClients().get(i);
 				campaign = client.getCampaigns().get(campaignNo);
 				
-				for(int j=0;j<CreativeStaff.getCreativeStaffs().size();j++) {
-					if(staffNo == CreativeStaff.getCreativeStaffs().get(j).getStaffNo()) {
-						campaign.assignStaff(CreativeStaff.getCreativeStaffs().get(j));
+				for(int j=0;j<StaffMember.getStaffMembers().size();j++) {
+					if(staffNo == StaffMember.getStaffMembers().get(j).getStaffNo()) {
+						campaign.assignStaff(StaffMember.getStaffMembers().get(j));
 					}
 				}
 				

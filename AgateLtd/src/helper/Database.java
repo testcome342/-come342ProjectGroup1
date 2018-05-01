@@ -2,14 +2,16 @@ package helper;
 import java.util.ArrayList;
 import java.util.List;
 
+import domain.AdminStaff;
 import domain.Campaign;
 import domain.Client;
 import domain.CreativeStaff;
+import domain.StaffMember;
 
 public class Database {
 	
 	public static List<Client> clientList = new ArrayList<Client>();
-	public static List<CreativeStaff> creativeStaffList = new ArrayList<CreativeStaff>();
+	public static List<StaffMember> staffMemberList = new ArrayList<StaffMember>();
 	
 	public static void init() {
 		
@@ -17,11 +19,13 @@ public class Database {
 		CreativeStaff mehmet = new CreativeStaff(3,"Mehmet Dursun", "20.05.2017", "ahmet@gmail.com");
 		CreativeStaff sami = new CreativeStaff(4,"Sami Dursun", "20.05.2017", "ahmet@gmail.com");
 		CreativeStaff ugur = new CreativeStaff(5,"Ugur Dursun", "20.05.2017", "ahmet@gmail.com");
+		AdminStaff hamdi = new AdminStaff(6,"Hamdi Dursun", "20.05.2017", "ahmet@gmail.com");
 		
-		creativeStaffList.add(ahmet);
-		creativeStaffList.add(mehmet);
-		creativeStaffList.add(sami);
-		creativeStaffList.add(ugur);
+		staffMemberList.add(ahmet);
+		staffMemberList.add(mehmet);
+		staffMemberList.add(sami);
+		staffMemberList.add(ugur);
+		staffMemberList.add(hamdi);
 		
 		
 		

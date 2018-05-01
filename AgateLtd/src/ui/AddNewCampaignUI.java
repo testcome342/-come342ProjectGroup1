@@ -15,7 +15,12 @@ import helper.ScanHelper;
 
 public class AddNewCampaignUI {
 
-private static AddNewCampaignUI instance;
+	/*
+	 Onur Tengirsek
+	 30.04.18
+	 */
+	
+	private static AddNewCampaignUI instance;
 	
 	public static AddNewCampaignUI getInstance() {		
 		instance = new AddNewCampaignUI();

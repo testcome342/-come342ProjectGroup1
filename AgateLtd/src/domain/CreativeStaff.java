@@ -1,8 +1,5 @@
 package domain;
 
-import java.util.List;
-
-import helper.Database;
 
 public class CreativeStaff extends StaffMember{
 	
@@ -15,10 +12,6 @@ public class CreativeStaff extends StaffMember{
 		super(staffNo, staffName, staffStartDate, staffEmailAddress);
 		
 		
-	}
-	
-	public static List<CreativeStaff> getCreativeStaffs() {
-		return Database.creativeStaffList;
 	}
 
 }
