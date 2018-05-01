@@ -15,6 +15,7 @@ public class Campaign {
 	private String finishDate;
 	private String startDate;
 	private List<StaffMember> staffMemberList;
+	private List<Advert> advertList;
 
 	public  Campaign() {}
 		//Default Constructor
@@ -93,6 +94,14 @@ public class Campaign {
 	
 	public void assignStaff(StaffMember staffMember) {
 		this.staffMemberList.add(staffMember);
+	}
+
+	public List<Advert> getAdvertList() {
+		return advertList;
+	}
+
+	public void setAdvertList(List<Advert> advertList) {
+		this.advertList = advertList;
 	}
 
 }
