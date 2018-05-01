@@ -26,9 +26,12 @@ public class AddNewClientUI {
 	
 	private AddNewClientUI() {
 		PrintHelper.print("*** Client list ***");
+		PrintHelper.printLine(40);
 		List<Client> clientList = Client.getClients();
 		if(clientList.size() != 0) {
 			for(int i=0; i< clientList.size(); i++) {
+				PrintHelper.print(String.valueOf(clientList.get(i).getId()), true);
+				
 				PrintHelper.print(String.valueOf(clientList.get(i).getId()) +" - "+ clientList.get(i).getCompanyName() + 
 						" (Campaigns: " + clientList.get(i).getCampaigns().size() + ")");
 			}
@@ -36,6 +39,7 @@ public class AddNewClientUI {
 		} else {
 			PrintHelper.print("Not Found Any Company at List..!");
 		}
+		PrintHelper.printLine(40);
 		startInterface();
 	}
 	
@@ -80,6 +84,8 @@ public class AddNewClientUI {
 					for(int i=0; i< Database.clientList.size(); i++) {
 						if(id == Database.clientList.get(i).getId()) {
 							Database.clientList.get(i).addNewCampaign(createNewCampaign());
+							PrintHelper.print(" -> Succesfull!! New Campaign is added");
+
 						}
 					}
 					break;

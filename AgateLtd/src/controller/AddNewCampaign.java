@@ -37,7 +37,7 @@ public class AddNewCampaign {
 										
 					 for(int j = 0;j<client.getCampaigns().size();j++) {
 						 int num = j + 1;
-						 PrintHelper.print(String.valueOf(num) + " " +client.getCampaigns().get(j).getTitle());
+						 PrintHelper.print("  "+String.valueOf(num) + " - " +client.getCampaigns().get(j).getTitle() + " " + "(Adverts: "+client.getCampaigns().get(j).getAdvertList().size()+")");
 					 }
 					 
 				}

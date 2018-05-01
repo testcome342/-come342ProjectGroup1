@@ -28,6 +28,7 @@ public class AddNewCampaignUI {
 	}
 	private AddNewCampaignUI() {
 		PrintHelper.print("*** Client list ***");
+		PrintHelper.printLine(40);
 		List<Client> clientList = Client.getClients();
 		if(clientList.size() != 0) {
 			for(int i=0; i< clientList.size(); i++) {
@@ -38,6 +39,7 @@ public class AddNewCampaignUI {
 		} else {
 			PrintHelper.print("Not Found Any Company at List..!");
 		}
+		PrintHelper.printLine(40);
 		startInterface();
 		
 	}
@@ -45,7 +47,9 @@ public class AddNewCampaignUI {
 	public void startInterface() {
 		PrintHelper.print("Please Select a Client =>",true);
 		int id = ScanHelper.scanInt();
+		PrintHelper.printLine(40);
 		selectClient(id);
+		PrintHelper.printLine(40);
 		Campaign campaign = createNewCampaign();
 		
 		for(int i=0; i < Database.clientList.size();i++) {

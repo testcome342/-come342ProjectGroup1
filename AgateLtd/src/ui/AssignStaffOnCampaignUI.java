@@ -21,6 +21,7 @@ public class AssignStaffOnCampaignUI {
 	
 	private AssignStaffOnCampaignUI() {
 		PrintHelper.print("*** Client list ***");
+		PrintHelper.printLine(40);
 		List<Client> clientList = Client.getClients();
 		if(clientList.size() != 0) {
 			for(int i=0; i< clientList.size(); i++) {
@@ -31,15 +32,16 @@ public class AssignStaffOnCampaignUI {
 		} else {
 			PrintHelper.print("Not Found Any Company at List..!");
 		}
+		PrintHelper.printLine(40);
 		startInterface();
 	}
 	
 	public void startInterface() {
 		PrintHelper.print("Please Select a Client =>",true);
 		int clientId = ScanHelper.scanInt();
-		
+		PrintHelper.printLine(40);
 		boolean isShowCampaign = selectClient(clientId);
-		
+		PrintHelper.printLine(40);
 		if(isShowCampaign) {
 			PrintHelper.print("Please Select a Campaign =>", true);
 			int campaignNo = ScanHelper.scanInt();
