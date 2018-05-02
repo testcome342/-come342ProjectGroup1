@@ -64,12 +64,8 @@ public class Advert {
 		PrintHelper.print("Actual Advert Cost: ", true);
 		Double actualAdvertCost = ScanHelper.scanDouble();
 		PrintHelper.printLine(40);
-		PrintHelper.print("1- Poster Advert");
-		PrintHelper.print("2- Leaflet Advert");
-		PrintHelper.print("3- Magazine Advert");
-		PrintHelper.print("4- Newspaper Advert");
-		PrintHelper.print("5- TV Advert");
-		PrintHelper.print("6- Radio Advert");
+		PrintHelper.print("1- Poster Advert    2- Leaflet Advert  3- Magazine Advert");
+		PrintHelper.print("4- Newspaper Advert 5- TV Advert       6- Radio Advert");
 		PrintHelper.printLine(40);
 		PrintHelper.print("Please enter a advert number=> ", true);
 		int choice = ScanHelper.scanInt();

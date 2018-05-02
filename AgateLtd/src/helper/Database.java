@@ -11,10 +11,21 @@ import domain.StaffMember;
 
 public class Database {
 	
+	/*
+	 * Database
+	 * including clientList and staffMemberList
+	 * including init method
+	 * */
+	
 	public static List<Client> clientList = new ArrayList<Client>();
 	public static List<StaffMember> staffMemberList = new ArrayList<StaffMember>();
 	
 	public static void init() {
+		
+		/*
+		 * Ready client, campaign, creative and admin staff
+		 * and added staffMemberLit and clientList
+		 * */
 		
 		CreativeStaff ahmet = new CreativeStaff(2,"Ahmet Dursun", "20.05.2017", "ahmet@gmail.com");
 		CreativeStaff mehmet = new CreativeStaff(3,"Mehmet Dursun", "20.05.2017", "ahmet@gmail.com");

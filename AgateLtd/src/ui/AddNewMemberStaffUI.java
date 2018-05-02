@@ -24,8 +24,13 @@ public class AddNewMemberStaffUI {
 	
 	private AddNewMemberStaffUI() {
 		PrintHelper.print("*** Staff list ***");
+		PrintHelper.printLine(40);
 		List<StaffMember> staffMemberList = StaffMember.getStaffMembers();
+		/*ClientList size control*/
 		if(staffMemberList.size() != 0) {
+			/*
+			 * Print client object in clientList
+			 * */
 			for(int i=0; i< staffMemberList.size(); i++) {
 				PrintHelper.print(String.valueOf(staffMemberList.get(i).getStaffNo()) + " " +staffMemberList.get(i).getStaffName());
 			}
@@ -38,6 +43,10 @@ public class AddNewMemberStaffUI {
 	
 	public void startInterface() {
 		PrintHelper.printLine(40);
+		/*
+		 * User enter staff details
+		 * */
+		
 		PrintHelper.print("Staff No: ", true);
 		int staffNo = ScanHelper.scanInt();
 		PrintHelper.print("Staff Name: ", true);
@@ -71,6 +80,7 @@ public class AddNewMemberStaffUI {
 				PrintHelper.print("Succesfully! Staff added in list.");
 				break;
 			} else {
+				//Try enter a number
 				PrintHelper.print("Error!Try enter a number");
 				PrintHelper.print("Please Select CreativeStaff or AdminStaff =>",true);
 				choice = ScanHelper.scanInt();

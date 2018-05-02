@@ -7,6 +7,13 @@ public class ScanHelper {
 	//Arda Batuhan Demir
 	//30.04.2018
 	
+	/*
+	 * ScanHelper
+	 * -> scanInt = int scanner
+	 * -> scanString = String scanner
+	 * -> scanDouble = double scanner
+	 * */
+	
 
 	private static Scanner scanner;
 

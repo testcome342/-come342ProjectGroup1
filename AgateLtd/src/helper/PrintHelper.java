@@ -1,6 +1,14 @@
 package helper;
 
 public class PrintHelper {
+	
+	/*
+	 * PrintHelper
+	 *  -> print = print and new line
+	 *  -> print(true) = print and not new line
+	 *  -> printLine = print "-" symbol
+	 *  -> printRow = print new row
+	 * */
 
 	public static void print(String message) {
 		System.out.println(message);

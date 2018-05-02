@@ -11,6 +11,9 @@ import ui.AssignStaffOnCampaignUI;
 public class Application {
 
 	public static void main(String[] args) {
+		/*
+		 * Database init method => ready objects and including in list
+		 * */
 		Database.init();
 		int choice;
 				

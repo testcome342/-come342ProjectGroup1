@@ -28,15 +28,19 @@ public class AddNewClientUI {
 		PrintHelper.print("*** Client list ***");
 		PrintHelper.printLine(40);
 		List<Client> clientList = Client.getClients();
+		
+		/*ClientList size control*/
 		if(clientList.size() != 0) {
-			for(int i=0; i< clientList.size(); i++) {
-				PrintHelper.print(String.valueOf(clientList.get(i).getId()), true);
-				
+			/*
+			 * Print client object in clientList
+			 * */
+			for(int i=0; i< clientList.size(); i++) {				
 				PrintHelper.print(String.valueOf(clientList.get(i).getId()) +" - "+ clientList.get(i).getCompanyName() + 
 						" (Campaigns: " + clientList.get(i).getCampaigns().size() + ")");
 			}
 			
 		} else {
+			/*İf clientList don't have client*/
 			PrintHelper.print("Not Found Any Company at List..!");
 		}
 		PrintHelper.printLine(40);
@@ -44,6 +48,11 @@ public class AddNewClientUI {
 	}
 	
 	public void startInterface() {
+		
+		/*
+		 * User enter client details
+		 * */
+		
 		String companyName, companyAddress, companyEmail, contactName, contactEmail;
 		int companyNo;
 		
@@ -67,13 +76,20 @@ public class AddNewClientUI {
 
 		Client newClient = new Client(companyNo, companyName, companyAddress, companyEmail, contactName, contactEmail);
 
+		/*Client created and if client add, return clientId*/
 		int id = createNewClient(newClient);
 		
 		if(id > 0) {
+			/*
+			 * İf client add in clientList
+			 * */
+			
 			PrintHelper.print(" -> Succesfull!! New Client is added");
 			
 			PrintHelper.print("Would you like to add a campaign ? (Yes/No)");
-			
+			/*
+			 * After client add, ask to create campaingn 
+			 * */
 			while(true) {
 				
 				PrintHelper.print("Answer=> ", true);
@@ -90,8 +106,11 @@ public class AddNewClientUI {
 					}
 					break;
 				} else if("NO".equals(response.toUpperCase())){
+					
 					break;
+					
 				} else {
+					
 					PrintHelper.print("Error! Try enter answer");
 				}
 			}

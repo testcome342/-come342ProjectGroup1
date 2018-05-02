@@ -22,6 +22,10 @@ public class Campaign {
 	
 	public static Campaign createCampaign() {
 		
+		/*
+		 * User enter campaign details
+		 * */
+		
 		String title, finishDate, startDate;
 		Double estimatedCost;
 		
