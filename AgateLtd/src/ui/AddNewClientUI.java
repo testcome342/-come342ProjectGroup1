@@ -59,6 +59,30 @@ public class AddNewClientUI {
 		PrintHelper.print("Company No= ", true);
 		companyNo = ScanHelper.scanInt();
 		
+		
+		/*Client id control */
+		boolean isEmpty = true;
+		
+		while(true) {
+			
+			for(int i=0; i < Client.getClients().size();i++) {
+				if(companyNo == Client.getClients().get(i).getId()) {
+					isEmpty = false;
+				}
+			}
+			
+			if(isEmpty) {
+				
+				break;
+			} else {
+				PrintHelper.print("Error! This company no already exists.");
+				PrintHelper.print("Company No= ", true);
+				companyNo = ScanHelper.scanInt();
+				isEmpty = true;
+			}
+			
+		}
+		
 		PrintHelper.print("Company Name= ", true);
 		companyName = ScanHelper.scanString();
 		
